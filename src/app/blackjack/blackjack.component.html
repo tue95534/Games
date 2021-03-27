@@ -1,0 +1,69 @@
+<div>
+    <div class="background"></div>
+    <div class="title">BLACKJACK</div>
+  <!-- 
+    This is the center console with buttons for the user
+    -->
+    <div class="centerconsole">
+      <div class="instructions">{{this.instructionDisplay}}</div>
+      <div class="playOptions">
+        <button class="playBtns" (click)="wantsCard()">HIT ME!</button>
+        <button class="playBtns" (click)="stay()">STAY!</button>
+      </div>
+      <div class="middleConsole">
+        <div class="bankroll">Bank Balance: ${{this.numOf500s*500 + this.numOf100s*100 + this.numOf10s*10 + this.numOf1s*1}}</div>
+        <!-- <div class="bankroll1">500: {{this.numOf500s}} 100: {{this.numOf100s}} 10: {{this.numOf10s}} 1: {{this.numOf1s}}</div> -->
+        <br />
+        <button class="gameBtns" (click)="wagerPlaced()">PLACE WAGER</button>
+      </div>
+      <div class="coinlabel">
+        <p>YOUR COINS</p>
+        <div class="coins">
+          <button class="coin" (click)="wager500()">{{fiveHundredMessage}}</button>
+          <p class="counts">{{this.numOf500s}}</p>
+          <button class="coin" (click)="wager100()">{{oneHundredMessage}}</button>
+          <p class="counts">{{this.numOf100s}}</p>
+          <button class="coin" (click)="wager10()">{{tenMessage}}</button>
+          <p class="counts">{{this.numOf10s}}</p>
+          <button class="coin" (click)="wager1()">{{oneMessage}}</button>
+          <p class="counts">{{this.numOf1s}}</p>
+        </div>
+      </div>
+    </div>
+    <button class="startgame" (click)="startGame()">START NEW GAME</button>
+  <!-- 
+    This is the player's hand
+     -->
+    <div class="playersHand">
+      <div class="playersHand1">
+        <div *ngFor="let item of playerURLs; trackBy:trackItem; let i = index">
+            <img *ngIf="i < 5" src="{{item}}" class="straight">
+        </div>
+      </div>
+      <br />
+      <p class="handlabel">YOUR HAND</p>
+      <div class="playersHand2">
+        <div *ngFor="let item of playerURLs; trackBy:trackItem; let i = index">
+            <img *ngIf="i >= 5" src="{{item}}" class="straight">
+        </div>
+      </div>
+    </div>
+    <!-- 
+    This is the dealer/computer's hand
+     -->
+    <div class="dealersHand">
+      <div class="compHand1">
+        <div *ngFor="let item of computerURLs; trackBy:trackItem; let i = index">
+            <img *ngIf="i < 5" src="{{item}}" class="straight">
+        </div>
+      </div>
+      <br />
+      <p class="dealerlabel">DEALER HAND</p>
+      <div class="compHand2">
+        <div *ngFor="let item of computerURLs; trackBy:trackItem; let i = index">
+            <img *ngIf="i >= 5" src="{{item}}" class="straight">
+        </div>
+      </div>
+    </div>
+  </div>
+  

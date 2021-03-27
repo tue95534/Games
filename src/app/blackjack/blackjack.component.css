@@ -1,0 +1,312 @@
+.handc {
+    height: 150px;
+    width: 110px;
+    align-content: center;
+    background-color: transparent;
+    padding: 0;
+    margin: 10px;
+    border: transparent;
+    display: inline-block;
+    position: static;
+}
+
+.straight {
+    display: inline-block;
+    max-width: 60px;
+    max-height: 100%;
+    text-shadow: teal 3px;
+    margin: 3px;
+    padding: 0;
+    position: static;
+}
+
+.background {
+    z-index: -1;
+    position: fixed;
+    top: 70px;
+    bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
+}
+
+.title {
+    margin-top: 80px;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+
+.playersHand1 {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 220px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.playersHand2 {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 375px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.startgame {
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: darkblue;
+    color: white;
+    border: 5px solid;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.startgame:hover {
+    width: 220px;
+    height: 40px;
+}
+
+.handlabel {
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    right: 25px;
+    top: 280px;
+}
+
+.dealerlabel {
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    left: 25px;
+    top: 280px;
+}
+
+.centerconsole {
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+    width: fit-content;
+    max-height: fit-content;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.8);
+}
+
+.bankroll {
+    font-size: 35px;
+    font-weight: bold;
+    color: blue;
+}
+
+.gameBtns {
+    background-image: linear-gradient(blue, red);
+    height: 35px;
+    width: 130px;
+    margin: 5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    border: 5px solid;
+}
+
+.gameBtns:hover, .playBtns:hover {
+    color: yellow;
+}
+
+.instructions {
+    font-size: 13px;
+    font-weight: bold;
+    color: blue;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.compHand1 {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 220px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.counts {
+    display: block;
+    margin-top: 60px;
+    margin-left: -8px;
+}
+
+.compHand2 {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    bottom: 375px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.coin {
+    height: 70px;
+    width: 70px;
+    border: 5px solid;
+    border-radius: 35px;
+    border-color: black;
+    color: white;
+    background-image: linear-gradient(grey, black);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.coin:hover {
+    border-color: yellow;
+}
+
+.middleConsole {
+    background-image: linear-gradient(to right, red, yellow);
+    margin: 0;
+    position: static;
+}
+
+.coins {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* background-image: linear-gradient(to left, red, yellow); */
+    margin-top: -25px;
+    height: 90px;
+}
+
+.playBtns {
+    height: 45px;
+    width: 140px;
+    border-radius: 15px;
+    border: 5px solid;
+    background-image: linear-gradient(white, black);
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+.playOptions {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to left, red, yellow);
+    height: 55px;
+    align-items: center;
+}
+
+.newLineHand {
+    display: block;
+}
+
+.coinlabel {
+    margin-top: -17px;
+    background-image: linear-gradient(to left, red, yellow);
+}
+
+@media screen and (max-width: 1000px) {
+    .title {
+      font-size: 50px;
+    }
+
+    .playersHand {
+        border: 6px solid;
+        border-radius: 6px;
+        background-image: linear-gradient(to right, red, orange);
+    }
+
+    .dealersHand {
+        border: 6px solid;
+        border-radius: 6px;
+        background-image: linear-gradient(to right, green, blue);
+    }
+
+    .straight {
+        max-width: 50px;
+    }
+
+    .playersHand1 {
+        position: static;
+        margin: none;
+        padding: none;
+    }
+
+    .playersHand2 {
+        margin-top: -35px;
+        padding: none;
+        position: static;
+    }
+
+    .handlabel {
+        margin-top: -20px;
+        margin-bottom: none;
+        padding: none;
+        position: static;
+        text-align: center;
+    }
+
+    .compHand1 {
+        position: static;
+        margin: none;
+        padding: none;
+    }
+
+    .compHand2 {
+        margin-top: -40px;
+        padding: none;
+        position: static;
+    }
+
+    .dealerlabel {
+        margin-top: -25px;
+        padding: none;
+        position: static;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .coin {
+        height: 50px;
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .playBtns {
+        font-size: 20px;
+        width: 110px;
+    }
+
+    .bankroll {
+        font-size: 25px;
+    }
+}
