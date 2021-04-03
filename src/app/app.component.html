@@ -1,4 +1,19 @@
-<div>
-  <app-navpane></app-navpane>
-  <app-blackjack></app-blackjack>
-</div>
+<nav class="navBar">
+  <a class="logo" routerLink="home">
+    <img src="assets/images/CARDBACK.png" class="logo">
+  </a>
+  <div class="navDiv">
+    <a class="navLink" routerLink="home">Home</a>
+    <a class="navLink" routerLink="/blackjack">Blackjack</a>
+    <a class="navLink" routerLink='/matching'>Cards</a>
+    <a class="navLink" routerLink='/pairs'>Pairs</a>
+    <a class="navLink" routerLink='/tictactoe'>TicTacToe</a>
+  </div>
+  <a class="logo1" routerLink="home">
+    <img src="assets/images/CARDBACK.png" class="logo">
+  </a>
+</nav>
+
+<!-- <app-home></app-home> -->
+
+<router-outlet></router-outlet>

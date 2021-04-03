@@ -1,0 +1,77 @@
+.title {
+    position: static;
+    display: flex;
+    font-size: 35px;
+    margin-top: 68px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: darkblue;
+    text-shadow: 3px 3px 5px white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.board {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 120px;
+}
+  
+.board1 {
+    display:flex;
+    position: static;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 3px;
+    max-width: 800px;
+    color: yellow;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.board2 {
+    display:flex;
+    position: static;
+    margin-left: auto; margin-right: auto; margin-top: -20px; margin-bottom: 3px;
+    max-width: 800px;
+    color: yellow;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.card {
+    display: inline-flex;
+    height: fit-content;
+    padding: none;
+}
+  
+.straight {
+    height: 10vh;
+    padding: none;
+}
+
+.titleimg {
+    position: static;
+    margin-top: 90px;
+    margin-left: auto; margin-right: auto;
+}
+
+.fieldc {
+    height: fit-content;
+    align-content: center;
+    background-color: transparent;
+    padding: 0;
+    border: transparent;
+}
+  
+.background {
+      z-index: -1;
+      position: fixed;
+      top: 70px;
+      bottom: 0; left: 0; right: 0;
+      background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
+}

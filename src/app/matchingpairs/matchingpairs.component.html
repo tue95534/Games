@@ -1,0 +1,71 @@
+<div class="background"></div>
+<p class="title">MATCH PAIRS!</p>
+<!-- <div class="titleimg">
+  <img src="assets/images/pairstitle.png" class="straight">
+</div> -->
+
+<div class="board">
+  <div class="board1">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i<6" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=6 && i<12" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=12 && i<18" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=18 && i<24" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=24 && i<30" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=30 && i<36" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=36 && i<42" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+  <br />
+  <div class="board2">
+    <div *ngFor="let item of deck; trackBy:trackItem; let i = index" class="card">
+        <button *ngIf="i>=42 && i<48" (click)="clicked(item.rank, item.suit, item.index)"  class="fieldc">
+            <img src="{{ item.url }}" class="straight">
+        </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,218 @@
+.background {
+    z-index: -1;
+    position: fixed;
+    top: 70px;
+    bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
+}
+
+.title {
+    position: static;
+    display: flex;
+    font-size: 80px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: white;
+}
+
+.start {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-color: black;
+    height: 40px;
+    margin: auto;
+}
+
+.startbtn {
+    width: fit-content;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-image: linear-gradient(black, blue);
+    color: white;
+    font-size: 20px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 8px;
+}
+
+.startbtn:hover {
+    transform: scale(1.2,1.2);
+}
+
+.resultDisplay {
+    position: absolute;
+    top: 270px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    font-size: 50px;
+    height: fit-content; 
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    background-image: linear-gradient(black, blue 25%, blue 75%, black 100%);
+}
+
+
+/* card formatting */
+        .cardBtns {
+            width: fit-content;
+            height: fit-content;
+            background-color: darkblue;
+            margin-left: 3px; margin-right: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .cardBtns:hover {
+            background-color: yellow;
+        }
+
+        .straight, .straightComp {
+            display: inline-block;
+            max-height: 100%;
+            text-shadow: teal 3px;
+            margin: 3px;
+            padding: 0;
+            position: static;
+        }
+
+        .straight {
+            max-width: 70px;
+        }
+
+        .straightComp{
+            border: 2px solid;
+            border-color: white;
+            border-radius: 5px;
+            max-width: 60px;
+        }
+
+        .cards{
+            max-width: fit-content;
+        }
+
+        .tilt {
+            max-width: 100%;
+            max-height: 100%;
+            transform: skewX(55deg);
+            transform: rotateX(55deg);
+            border-bottom: 7px solid;
+            border-color: black;
+        }
+
+        .fieldc {
+            max-width: 85px;
+            align-content: center;
+            background-color: transparent;
+            padding: 0;
+            margin: 2px;
+            border: transparent;
+        }
+
+/* field block */
+        .fieldblock, .computerblock, .playerblock {
+            display: flex;
+            align-items: center;
+            border-bottom: 5px solid;
+            color: white;
+            height: fit-content;
+            padding: 10px;
+        }
+
+        .fieldblock {
+            background-image: linear-gradient(black, yellow);
+        }
+
+        .computerblock, .playerblock {
+            background-image: linear-gradient(yellow, black);
+        }
+
+        .fieldlabel, .playerlabel, .complabel {
+            position: absolute;
+            left: 5PX;
+            width: 160px;
+            font-size: 25px;
+            color: white;
+            display: flexbox;
+            text-align: center;
+            margin-left: 10px;
+            text-shadow: 5px 5px 5px darkblue;
+        }
+
+        .fieldHand, .playersHand1, .computerHand1 {
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-flex;
+            align-items: center;
+            max-width: 650px;
+            height: 100px;
+        }
+
+        .fieldScore, .computerScore, .playerScore {
+            position: absolute;
+            right: 5PX;
+            width: 160px;
+            display: flexbox;
+            text-align: center;
+            margin-right: 10px;
+            font-size: 30px; color: white;
+        }
+
+
+@media screen and (max-width: 1100px) {
+    .title {
+      font-size: 50px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .title {
+      font-size: 32px;
+    }
+    .fieldHand {
+        max-width: 400px;
+    }
+
+    .fieldlabel, .playerlabel, .complabel, .fieldScore, .computerScore, .playerScore {
+        font-size: 18px;
+        position: static;
+        margin-left: auto; margin-right: auto;
+        height: fit-content;
+        width: fit-content;
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        margin: none;
+        padding: none;
+    }
+
+    .fieldblock, .computerblock, .playerblock {
+        display: block;
+        position: static;
+        margin-left: auto;
+            margin-right: auto;
+        align-items: center;
+        text-align: center;
+        height: 25vh;
+    }
+
+    .playersHand1, .computerHand1, .fieldHand {
+        max-width: 90vw;
+    }
+
+    .straight {
+        max-width: 42px;
+    }
+
+}

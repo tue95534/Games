@@ -1,15 +1,3 @@
-.handc {
-    height: 150px;
-    width: 110px;
-    align-content: center;
-    background-color: transparent;
-    padding: 0;
-    margin: 10px;
-    border: transparent;
-    display: inline-block;
-    position: static;
-}
-
 .straight {
     display: inline-block;
     max-width: 60px;
@@ -158,7 +146,7 @@
 .counts {
     display: block;
     margin-top: 60px;
-    margin-left: -8px;
+    margin-left: -18px;
 }
 
 .compHand2 {
@@ -273,6 +261,7 @@
         padding: none;
         position: static;
         text-align: center;
+        font-size: 35px;
     }
 
     .compHand1 {
@@ -303,10 +292,17 @@
 
     .playBtns {
         font-size: 20px;
-        width: 110px;
+        width: 130px;
     }
 
     .bankroll {
         font-size: 25px;
     }
+}
+
+@media screen and (max-width: 500px) {
+    .centerconsole {
+        width: 100%;
+    }
+
 }

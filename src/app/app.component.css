@@ -1,0 +1,63 @@
+.navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    top: 0; left: 0; right: 0;
+    background-color: darkblue;
+}
+
+.navDiv {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.navLink:hover {
+    color: yellow;
+}
+
+.logo {
+    display: inline-block;
+    max-width: 50px;
+    max-height: 100%;
+    position: static;
+}
+
+.logo1 {
+    display: inline-block;
+    max-width: 50px;
+    max-height: 100%;
+    position: static;
+}
+
+@media screen and (max-width: 670px) {
+    .navBar {
+        display: block;
+        text-align: center;
+    }
+    .logo1 {
+        display: none;
+    }
+    .logo {
+        max-width: 40px;
+        margin-left: auto; margin-right: auto;
+        margin-top: -2px;
+    }
+    .navDiv {
+        margin-top: -6px;
+        max-width: 550px;
+        width: 100vw;
+    }
+}

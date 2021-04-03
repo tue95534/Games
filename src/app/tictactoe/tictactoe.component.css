@@ -1,0 +1,141 @@
+.board {
+    margin-top: 10px;
+}
+
+.title {
+    position: static;
+    display: flex;
+    font-size: 35px;
+    margin-top: 68px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: darkblue;
+    text-shadow: 3px 3px 5px white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.boardbtn {
+    display: inline-flex; height: 100px; width: 100px; border: 2px solid; background-color: gray; vertical-align: middle;
+    top:0px; text-align: center; justify-content: center; justify-items: center; align-items: center;
+    font-size: 75px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+.boardbtn:hover {
+    border-color: white;
+}
+
+.background {
+    z-index: -1;
+    position: fixed;
+    top: 70px;
+    bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
+}
+
+.playagain {
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    border-color: white;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 15px;
+    border: 2px solid;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.score {
+    display: inline-flex;
+    height: 60px;
+    width: 120px;
+    font-size: 40px;
+    color: red;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    border-color: white;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 15px;
+    border: 2px solid;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.scorePanel {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-height: fit-content;
+}
+
+.result {
+    display: absolute;
+    height: 65px;
+    color: white;
+    top: 500px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 45px;
+    padding: 0;
+    margin: 0;
+}
+
+.submitScore {
+    position: relative;
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    margin-right: 20px;
+    top: 0;
+}
+
+.highScoresDiv {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    display: inline-flex;
+    width:fit-content;
+    color: black;
+    margin: 0px;
+}
+
+.scores {
+    display: flexbox;
+    height: fit-content;
+}
+
+.formBtn {
+    height: 30px;
+    width: 125px;
+    border-color: white;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 10px;
+    border: 2px solid;
+    color: white;
+    padding: 0;
+    margin: 0;
+}

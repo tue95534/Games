@@ -1,0 +1,93 @@
+.background {
+    z-index: -1;
+    position: fixed;
+    top: 70px;
+    bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
+}
+
+.title {
+    position: static;
+    display: flex;
+    font-size: 35px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: darkblue;
+    text-shadow: 3px 3px 5px white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.games {
+    max-width: 690px;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    display: block;
+    text-align: center;
+}
+
+.link {
+    display: inline-flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.gameImg {
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.matchingBtn {
+    justify-content: space-around;
+    align-items: center;
+    width: 270px;
+    height: 225px;
+    background-color: black;
+    border: 5px solid;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.blackjackBtn {
+    justify-content: space-around;
+    align-items: center;
+    width: 270px;
+    height: 225px;
+    background-color: black;
+    border: 5px solid;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.pairsBtn {
+    display: flexbox;
+    justify-content: space-around;
+    align-items: center;
+    width: 270px;
+    height: 225px;
+    background-color: black;
+    border: 5px solid;
+    border-radius: 30px;
+    margin: 10px;
+}
+.matchingBtn:hover, .blackjackBtn:hover, .pairsBtn:hover {
+    background-color: yellow;
+    border-color: yellow;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 670px) {
+    .games {
+        color: white;
+    }
+    .link {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

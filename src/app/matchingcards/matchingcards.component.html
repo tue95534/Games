@@ -1,0 +1,41 @@
+<div>
+    <div class="background"></div>
+    <div class="title">
+        <header>MATCHING GAME</header>
+    </div>
+
+    <div class="start">
+        <button class="startbtn" (click)="startGame()">Start Game!</button>
+    </div>
+
+    <div class="computerblock">
+        <div class="complabel">COMPUTER'S HAND</div>
+        <div class="computerHand1">
+            <div *ngFor="let item of computerURLs; trackBy:trackItem; let i = index">
+                <img src='{{item}}' class="straightComp">
+            </div>
+        </div> 
+        <div class="computerScore">SCORE: {{this.computerScore}}</div>
+    </div>
+
+    <div class="fieldblock">
+        <div class="fieldlabel">FIELD</div>
+        <div class="fieldHand">
+            <div *ngFor="let item of fieldHand; trackBy:trackItem; let i = index" class="fieldc">
+                <img src='{{ "assets/images/" + item.rank + item.suit + ".PNG" }}' class="tilt">
+            </div>
+        </div>
+        <div class="fieldScore"></div>
+    </div>
+
+    <div class="playerblock">
+        <div class="playerlabel">YOUR HAND</div>
+        <div class="playersHand1">
+            <div *ngFor="let item of playerHand; trackBy:trackItem; let i = index">
+                <button (click)="playCard(item.rank, item.suit)" class="cardBtns"><img src='{{ "assets/images/" + item.rank + item.suit + ".PNG" }}' class="straight"></button>
+            </div>
+        </div>
+        <div class="playerScore">SCORE: {{this.playerScore}}</div>
+    </div>
+    <div class="resultDisplay">{{ this.instructionDisplay }}</div>
+</div>

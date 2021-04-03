@@ -1,0 +1,30 @@
+<div class="background"></div>
+<p class="title">GAMES!</p>
+<div class="games">
+    <div class="link">
+        <a routerLink='/matching'>
+            <button class="matchingBtn">
+                <img class="gameImg" src='{{ "assets/images/matching.PNG" }}'>
+            </button>
+        </a>
+        <a routerLink="/blackjack">
+            <button class="blackjackBtn">
+                <img class="gameImg" src='{{ "assets/images/blackjack.PNG" }}'>
+            </button>
+        </a>
+    </div>
+    <div class="link">
+        <a routerLink="/pairs">
+            <button class="pairsBtn">
+                <img class="gameImg" src='{{ "assets/images/pairs.PNG" }}'>
+            </button>
+        </a>
+        <a routerLink="/tictactoe">
+            <button class="pairsBtn">
+                <img class="gameImg" src='{{ "assets/images/tictactoe.PNG" }}'>
+            </button>
+        </a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

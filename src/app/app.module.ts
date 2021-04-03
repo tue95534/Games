@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlackjackComponent } from './blackjack/blackjack.component';
-import { NavpaneComponent } from './navpane/navpane.component';
+import { MatchingpairsComponent } from './matchingpairs/matchingpairs.component';
+import { TictactoeComponent } from './tictactoe/tictactoe.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BlackjackComponent,
-    NavpaneComponent
+    routingComponents,
+    MatchingpairsComponent,
+    TictactoeComponent
   ],
   imports: [
     BrowserModule,
