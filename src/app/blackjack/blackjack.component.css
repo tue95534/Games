@@ -146,7 +146,7 @@
 .counts {
     display: block;
     margin-top: 60px;
-    margin-left: -18px;
+    margin-left: -13px;
 }
 
 .compHand2 {
@@ -168,7 +168,7 @@
     border-color: black;
     color: white;
     background-image: linear-gradient(grey, black);
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
     margin-left: 3px;
     margin-right: 3px;
