@@ -149,7 +149,7 @@ export class BlackjackComponent implements OnInit {
 
   checkIfOver(hand: string[]):boolean {
     const total = this.checkScore(hand);
-    if (total > 50) {return true;}
+    if (total > 21) {return true;}
     else {return false;}
   }
 
