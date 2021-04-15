@@ -1,4 +1,6 @@
-<div class="background"></div>
+<div class="background">
+    <img src={{backgroundImage}} class="img">
+</div>
 <div class="title">TIC-TAC-TOE</div>
 <div style="text-align: center;" class="board">
     <button class="boardbtn" (click)="btnClicked(0)">{{board[0]}}</button><button class="boardbtn" (click)="btnClicked(1)">{{board[1]}}</button><button class="boardbtn" (click)="btnClicked(2)">{{board[2]}}</button> <br />
@@ -11,29 +13,4 @@
         <button class="clear" (click)="clearScore()">CLEAR SCORE</button>
     </div>
     <br /> <br /> <br />
-    <!-- <div class="scores">
-        <div class="submitScore">
-            <form #nameForm="ngForm" (ngSubmit)="getName(nameForm.value)">
-                <label for="fname">Name:</label><br>
-                <input type="text" id="fname" name="fname" ngModel ><br>
-                <button class="formBtn">SUBMIT SCORE!</button>
-            </form>
-        </div>
-        <div class="highScoresDiv">
-            <table>
-                <tr>
-                  <th>Name</th><th>Wins</th><th>Losses</th><th>Ties</th>
-                </tr>
-                <tr>
-                    <th>{{topScoresNames[0]}}</th><th>{{topScores[0]}}</th><th>{{topScores[1]}}</th><th>{{topScores[2]}}</th>
-                </tr>
-                <tr>
-                    <th>{{topScoresNames[1]}}</th><th>{{topScores[3]}}</th><th>{{topScores[4]}}</th><th>{{topScores[5]}}</th>
-                </tr>
-                <tr>
-                    <th>{{topScoresNames[2]}}</th><th>{{topScores[6]}}</th><th>{{topScores[7]}}</th><th>{{topScores[8]}}</th>
-                </tr>
-              </table>
-        </div>
-    </div> -->
 </div>

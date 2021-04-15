@@ -13,14 +13,25 @@
     position: fixed;
     top: 70px;
     bottom: 0; left: 0; right: 0;
-    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
 }
 
 .title {
-    margin-top: 80px;
-    font-size: 80px;
+    position: static;
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
     color: white;
-    text-align: center;
+    text-shadow: 3px 3px 5px blue;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
 }
 
 .playersHand1 {
@@ -224,7 +235,8 @@
 
 @media screen and (max-width: 1000px) {
     .title {
-      font-size: 50px;
+      font-size: 40px;
+      font-family: "Times New Roman", Times, sans-serif;
     }
 
     .playersHand {

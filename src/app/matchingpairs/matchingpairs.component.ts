@@ -13,12 +13,24 @@ export class MatchingpairsComponent implements OnInit {
   deck: { rank:string, suit:string, index:number, url:string }[] = [];
   matchedCards: { rank:string, suit:string, index:number }[] = [];
   buttonsClicked: { rank:string, suit:string, index:number }[] = [];
-
+  backgroundImages:string[] = ["assets/images/image1.jpeg", "assets/images/image2.jpeg", "assets/images/image3.jpeg"];
+  backgroundImage:string = this.backgroundImages[0];
+  current:number = 0;
 
   constructor() {
     this.createDeck(1);
     this.deck = this.shuffleDeck(this.deck);
-    console.log(this.deck);
+    this.changeBackground();
+  }
+
+  changeBackground() {
+    setInterval(() => {
+      if (this.current > 2) {
+        this.current = 0;
+      }
+      this.backgroundImage = this.backgroundImages[this.current];
+      this.current++;
+    }, 5000);
   }
 
 
@@ -67,7 +79,7 @@ export class MatchingpairsComponent implements OnInit {
 
 
   clicked(rank:string, suit:string, index:number) {
-    if (this.checkIfValidClick(index)) {
+    if (this.checkIfValidClick(index) || this.buttonsClicked.length > 1) {
       return;
     }
     var buttonAdd = {

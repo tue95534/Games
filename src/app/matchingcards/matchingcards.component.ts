@@ -21,12 +21,26 @@ export class MatchingcardsComponent implements OnInit {
   playerScore:number = 0;
   computerScore:number = 0;
   deck:{ rank: string; suit: string; value: number; }[] = [];
+  backgroundImages:string[] = ["assets/images/image1.jpeg", "assets/images/image2.jpeg", "assets/images/image3.jpeg"];
+  backgroundImage:string = this.backgroundImages[0];
+  current:number = 0;
 
   constructor() {
   }
 
   ngOnInit(): void {
     this.startGame();
+    this.changeBackground();
+  }
+
+  changeBackground() {
+    setInterval(() => {
+      if (this.current > 2) {
+        this.current = 0;
+      }
+      this.backgroundImage = this.backgroundImages[this.current];
+      this.current++;
+    }, 5000);
   }
 
   startGame() {
@@ -82,12 +96,10 @@ export class MatchingcardsComponent implements OnInit {
   }
 
   initialDeal() {
-    for (let i = 0; i < 13; i++) {
-      this.fieldHand.push(this.deck.pop()!);
-    }
     for (let i = 0; i < 4; i++) {
       this.playerHand.push(this.deck.pop()!);
       this.computerHand.push(this.deck.pop()!);
+      this.fieldHand.push(this.deck.pop()!);
     }
   }
 

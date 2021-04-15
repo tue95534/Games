@@ -26,6 +26,9 @@ export class BlackjackComponent implements OnInit {
   playerURLs:string[] = [];
   computerURLs:string[] = [];
   wagePlaced:boolean = false;
+  backgroundImages:string[] = ["assets/images/image1.jpeg", "assets/images/image2.jpeg", "assets/images/image3.jpeg"];
+  backgroundImage:string = this.backgroundImages[0];
+  current:number = 0;
 
   constructor() {
     this.createDeck();
@@ -33,6 +36,17 @@ export class BlackjackComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.changeBackground();
+  }
+
+  changeBackground() {
+    setInterval(() => {
+      if (this.current > 2) {
+        this.current = 0;
+      }
+      this.backgroundImage = this.backgroundImages[this.current];
+      this.current++;
+    }, 7000);
   }
 
   startGame() {

@@ -6,6 +6,7 @@
     height: 75px;
     top: 0; left: 0; right: 0;
     background-color: darkblue;
+    z-index: 10;
 }
 
 .navDiv {

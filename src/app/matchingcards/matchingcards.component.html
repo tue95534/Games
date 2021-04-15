@@ -1,5 +1,7 @@
 <div>
-    <div class="background"></div>
+    <div class="background">
+        <img src={{backgroundImage}} class="img">
+    </div>
     <div class="title">
         <header>MATCHING GAME</header>
     </div>
@@ -20,9 +22,17 @@
 
     <div class="fieldblock">
         <div class="fieldlabel">FIELD</div>
-        <div class="fieldHand">
-            <div *ngFor="let item of fieldHand; trackBy:trackItem; let i = index" class="fieldc">
-                <img src='{{ "assets/images/" + item.rank + item.suit + ".PNG" }}' class="tilt">
+        <div class="field">
+            <div class="fieldHand">
+                <div *ngFor="let item of fieldHand; trackBy:trackItem; let i = index" class="fieldc">
+                    <img *ngIf="i < 6" src='{{ "assets/images/" + item.rank + item.suit + ".PNG" }}' class="tilt">
+                </div>
+            </div>
+            <br />
+            <div class="fieldHand1">
+                <div *ngFor="let item of fieldHand; trackBy:trackItem; let i = index" class="fieldc1">
+                    <img *ngIf="i >= 6" src='{{ "assets/images/" + item.rank + item.suit + ".PNG" }}' class="tilt1">
+                </div>
             </div>
         </div>
         <div class="fieldScore"></div>

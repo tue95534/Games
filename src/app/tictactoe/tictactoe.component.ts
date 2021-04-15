@@ -17,60 +17,31 @@ export class TictactoeComponent implements OnInit {
   topScoresNames: string[] = [];
   topScores: number[] = [];
   corners: number[] = [0, 2, 6, 8];
+  backgroundImages:string[] = ["assets/images/image1.jpeg", "assets/images/image2.jpeg", "assets/images/image3.jpeg"];
+  backgroundImage:string = this.backgroundImages[0];
+  current:number = 0;
 
-  constructor() { 
-    this.sortScores(); 
+  constructor() {
    }
 
    ngOnInit(): void {
     var random_boolean = Math.random() < 0.5;
     if (random_boolean) {
       this.board[4] = "O";
-    }
+    }    
+    this.changeBackground();
   }
 
-  getName(val: any) {
-   this.nametoAdd = val.fname;
-   this.addScore(this.nametoAdd, this.wins, this.losses, this.ties);
-   this.sortScores();
-  }
-
-  async fetchScore(playerId: number) {
-    const response = await fetch(`http://localhost:3003/entries/${playerId}`);
-    const json = await response.json();
-    console.log(json);
-    return json;
-  }
-
-  async sortScores() {
-    const response = await fetch(`http://localhost:3003/sort/`);
-    const json = await response.json();
-    var topScoresNew: any[] = [];
-    var topScoresNameNew: any[] = [];
-    
-    var count = 0;
-    json.forEach(function(item: any) {
-      if (count < 3) {
-        topScoresNameNew.push(item.playerName);
-        topScoresNew.push(item.wins);
-        topScoresNew.push(item.losses);
-        topScoresNew.push(item.ties);
-        count++;
+  changeBackground() {
+    setInterval(() => {
+      if (this.current > 2) {
+        this.current = 0;
       }
-    })
-    this.topScores = topScoresNew;
-    this.topScoresNames = topScoresNameNew;
-    return json;
+      this.backgroundImage = this.backgroundImages[this.current];
+      this.current++;
+    }, 5000);
   }
 
-  
-  addScore = (playerName: string, winsP: number, lossesP: number, tiesP: number) => {
-    console.log(playerName);
-    fetch(`http://localhost:3003/insert/${playerName}/${winsP}/${lossesP}/${tiesP}`)
-      .then(response => {
-        console.log(response);
-      })
-  }
 
   btnClicked(btn:number) {
     var played = false;

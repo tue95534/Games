@@ -1,21 +1,28 @@
 .background {
     z-index: -1;
-    position: fixed;
+    position: absolute;
     top: 70px;
     bottom: 0; left: 0; right: 0;
-    background-image: linear-gradient(to left, black, blue 25%, blue 75%, black 100%);
 }
 
 .title {
     position: static;
     display: flex;
-    font-size: 80px;
-    margin-top: 80px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 72px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     justify-content: space-around;
     color: white;
+    text-shadow: 3px 3px 5px blue;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
 }
 
 .start {
@@ -103,22 +110,17 @@
             max-width: fit-content;
         }
 
-        .tilt {
+        .tilt, .tilt1 {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 100px;
             transform: skewX(55deg);
             transform: rotateX(55deg);
-            border-bottom: 7px solid;
-            border-color: black;
         }
 
-        .fieldc {
+        .fieldc, .fieldc1 {
             max-width: 85px;
             align-content: center;
             background-color: transparent;
-            padding: 0;
-            margin: 2px;
-            border: transparent;
         }
 
 /* field block */
@@ -132,11 +134,18 @@
         }
 
         .fieldblock {
-            background-image: linear-gradient(black, yellow);
+            /* background-image: linear-gradient(black, yellow); */
+            height: 200px;
         }
 
-        .computerblock, .playerblock {
-            background-image: linear-gradient(yellow, black);
+        .field {
+            position: static;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            align-items: center;
+            text-align: center;
+            height: fit-content;
         }
 
         .fieldlabel, .playerlabel, .complabel {
@@ -151,13 +160,13 @@
             text-shadow: 5px 5px 5px darkblue;
         }
 
-        .fieldHand, .playersHand1, .computerHand1 {
+        .fieldHand, .playersHand1, .computerHand1, .fieldHand1 {
             margin-left: auto;
             margin-right: auto;
             display: inline-flex;
             align-items: center;
             max-width: 650px;
-            height: 100px;
+            height: fit-content;
         }
 
         .fieldScore, .computerScore, .playerScore {
@@ -178,13 +187,14 @@
 }
 @media screen and (max-width: 1000px) {
     .title {
-      font-size: 32px;
+        font-size: 37px;
+        font-family: "Times New Roman", Times, sans-serif;
     }
-    .fieldHand {
+    .fieldHand, .fieldHand1 {
         max-width: 400px;
     }
 
-    .fieldlabel, .playerlabel, .complabel, .fieldScore, .computerScore, .playerScore {
+    .fieldlabel, .playerlabel, .complabel, .fieldScore, .computerScore, .playerScore, .field {
         font-size: 18px;
         position: static;
         margin-left: auto; margin-right: auto;
@@ -197,22 +207,41 @@
         padding: none;
     }
 
+    .fieldlabel, .playerlabel, .complabel {
+        margin-bottom: 10px;
+    }
+
     .fieldblock, .computerblock, .playerblock {
         display: block;
         position: static;
         margin-left: auto;
-            margin-right: auto;
+        margin-right: auto;
         align-items: center;
         text-align: center;
         height: 25vh;
     }
 
-    .playersHand1, .computerHand1, .fieldHand {
-        max-width: 90vw;
+    .playersHand1, .computerHand1 {
+        max-width: 93vw;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fieldHand1, .tilt1, .tilt, .fieldHand {
+        max-width: 93vw;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fieldHand, .fieldHand1 {
+        margin: -15px;
     }
 
     .straight {
         max-width: 42px;
     }
-
 }
